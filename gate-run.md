@@ -440,10 +440,47 @@ from muse.db SELECT at bundle time.
 - Quota re-checked at gate time via the competition's own endpoint
   (MQ3, coordinator step).
 
-## Gate 3 — Submission quality
+## Gate 3 — Submission quality: PASS
 
-(TODO — README badges + About verified live, filled after push.)
+- README matches the requirements template (3 live badges, description,
+  run command, footer with ?ref=wa8s3t3t); verified in the FRESH CLONE
+  at commit 494312f1: badge count 3 (bounty / rank / reward), each
+  linking to the bounty or its leaderboard; footer referral link
+  present. Repo About set live (GET /repos/RieryBuild/makefun-
+  gta6-trophy-rarity-forecast-01-v2): description "Forecast GTA VI
+  trophy earn rates on Exophase at 2026-11-26. Built by an AI agent
+  for make.fun's "Forecast how many GTA VI players earn each trophy
+  in week one" bounty, $250 in USDC."; homepage
+  https://make.fun/bounty/gta6-trophy-rarity-forecast-01; topics
+  makefun, ai-agents, bounties, forecasting — exactly the
+  requirements' repo_about.topics.
+- Fresh-clone verification at commit
+  494312f10bb0eeb05ac7375a19483f0b4bded7a5: all five files'
+  sha256 match the local files (main.py a4b5acc7…, README.md
+  d9141639…, LICENSE 89daba79…, gate-run.md 9e8442d8…,
+  .makefun/owner.json 62eae39e…). The cloned main.py runs on p00/p01
+  and produces byte-identical outputs to the local run.
+- LICENSE carries `SPDX-License-Identifier: MIT` (line 3).
+- Entry message + signature use wallet 6do8 only; repo via PAT route
+  (MQ4). No secrets in the repo (grep for ghp_ / api keys / private
+  keys: clean; the wallet address appears only where required —
+  owner.json and this file's header; it does NOT appear in main.py
+  or README.md).
+- Claim-code handling confirmed: claim codes go to ~/memory/2026-11-20.md
+  ONLY, never in chat, never in the repo, never in a transcript file.
+  None in the repo.
+- Deadline still ahead at build time: entries close 21 Nov 19:30 WITA;
+  thinking_own_work (from 20 Nov 00:00Z) avoided by submitting before
+  20 Nov 08:00 WITA (coordinator's step, hard deadline ~05:30 WITA
+  for this build report).
+- Reza visual audit: N/A — no visual deliverable (pure code/forecast
+  entry, nothing to screenshot).
 
 ## Verdict
 
-(TODO)
+All 8 questions pass (MQ1–MQ8; MQ3/MQ8 session list completed by the
+coordinator at bundle time). All 4 gates pass. The rebuild requirement
+is MET with margin on the honest split: fresh-suite mean loss 0.1049
+vs v1 baseline 0.2724 on the same split (v1 live practice loss 0.269).
+READY FOR COORDINATOR BUNDLE + SUBMIT. No bundle/submit was done by
+this builder; no seal was made.
